@@ -87,6 +87,9 @@ const TOOL_HANDLERS: ToolHandlers = {
   ...createDowntimesToolHandlers(new v1.DowntimesApi(datadogConfig)),
   ...createRumToolHandlers(new v2.RUMApi(datadogConfig)),
 }
+
+console.log('Registered tools:', Object.keys(TOOL_HANDLERS))
+
 /**
  * Handler for invoking Datadog-related tools in the mcp-server-datadog.
  * The TOOL_HANDLERS object contains various tools that interact with different Datadog APIs.
